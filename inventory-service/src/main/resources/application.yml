@@ -1,0 +1,47 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: inventory-service
+
+  # Concurrency: Java 21 Virtual Threads
+  threads:
+    virtual:
+      enabled: true
+
+  # Database Connection (Docker PostgreSQL)
+  datasource:
+    url: jdbc:postgresql://localhost:5432/darkstore_inventory
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 20000
+
+  # JPA & Hibernate: Schema is owned by Flyway, Hibernate only validates
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  # Database Migrations (Flyway)
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+# Monitoring & Health Endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus
+  endpoint:
+    health:
+      show-details: always
