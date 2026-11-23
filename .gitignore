@@ -1,0 +1,66 @@
+# ===============================
+# Maven Build Artifacts
+# ===============================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ===============================
+# IntelliJ IDEA
+# ===============================
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# ===============================
+# Visual Studio Code
+# ===============================
+.vscode/
+
+# ===============================
+# Eclipse
+# ===============================
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+# ===============================
+# Logs & Diagnostics
+# ===============================
+*.log
+logs/
+hs_err_pid*
+replay_pid*
+
+# ===============================
+# Operating System Files
+# ===============================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===============================
+# Docker Volumes & Secrets
+# ===============================
+.env
+*.local.env
+postgres_data/
+redis_data/
+
+
+/docs/Dark Store Inventory Engine 110-Step Build Plan.md
